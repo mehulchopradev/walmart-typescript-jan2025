@@ -11,12 +11,14 @@ const areaRectangle = (length: number, breadth: number): number => {
 
 const length: number = 5;
 const breadth: number = 3;
+const numbers: [number, number] = [length, breadth];
 
 const p1 = perimeterRectangle(length, breadth);
 // perimeterRectangle('5', '3'); // error
 console.log(`Perimeter of rectangle: ${p1}`);
 
 console.log(perimeterRectangle(6)); // breadth default value of 2
+numbers.push(10);
 
 console.log(areaRectangle(length, breadth));
 
