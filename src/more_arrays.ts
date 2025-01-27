@@ -37,3 +37,17 @@ const l3: number[] = marks
   .filter((element: number) => element % 2 != 0)
   .map((element: number) => element ** 2);
 console.log(l3);
+
+
+const nos: number[] = [10, 9, 11, 15, 20, 5]
+const cnos: number[] = [...nos];
+
+cnos.sort((a: number, b: number) => b - a);
+
+console.log(nos);
+console.log(cnos);
+
+
+// nos array find out whether there is any student who has scored more than 20 marks
+// true/false
+console.log(nos.some((element: number) => element > 20));
