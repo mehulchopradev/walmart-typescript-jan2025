@@ -21,11 +21,39 @@ export default class Student extends CollegeUser {
 
   constructor(
     name: string = 'NA',
-    public roll: number = 0,
+    private roll: number = 0,
     gender: Gender = 'm',
-    public marks: number = 0) {
+    private _marks: number = 0) {
       super(name, gender);
       Student.count++;
+  }
+
+  // encapsulation, but the java way
+  setRoll(roll: number): void {
+    if (roll <= 0) {
+      console.log('Invalid roll');
+      return;
+    }
+
+    this.roll = roll;
+  }
+
+  getRoll(): number {
+    return this.roll;
+  }
+
+  // encapsulation, but the typescript way
+  set marks(marks: number) {
+    if (marks < 0) {
+      console.log('Invalid marks');
+      return;
+    }
+
+    this._marks = marks;
+  }
+
+  get marks(): number {
+    return this._marks;
   }
 
   /* constructor(

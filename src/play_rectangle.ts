@@ -16,8 +16,14 @@ const area = s[1];
 console.log(`Perimeter: ${perimeter}\nArea: ${area}`); */
 
 // destructuring
-const [perimeter, area] = statsFunc(length, breadth);
+const [perimeter, area] = statsFunc({length, breadth});
 console.log(`Perimeter: ${perimeter}\nArea: ${area}`); 
+
+/* console.log(statsFunc(4.5, 4.1));
+console.log(statsFunc(7, 6)); */
+console.log(statsFunc({ length: 4.5, breadth: 4.1 }));
+console.log(statsFunc({ breadth: 6, length: 7 }));
+
 
 const marks: number[] = [90, 80, 70, 85, 95];
 const [m1, m2, m3, ...rest] = marks; // array destructuring

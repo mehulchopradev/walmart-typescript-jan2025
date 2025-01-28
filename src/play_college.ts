@@ -1,5 +1,6 @@
 import Professor from './com/walmart/college/professor';
 import Student from './com/walmart/college/student';
+import process from './com/abc/salary/salary_processor';
 
 // 0
 console.log(Student.count);
@@ -24,9 +25,12 @@ const s2 = new Student();
 // Student() -> Student|constructor(4006)
 
 s2.name = 'jane';
-s2.roll = 12;
+// s2.roll = -10;
+s2.setRoll(10);
 s2.gender = 'f';
-s2.marks = 56;
+s2.marks = -56; // Internally -> s2.set marks(-50)
+console.log(s2.getRoll());
+console.log(s2.marks); // Internally -> s2.get marks()
 
 const s1d: string = s1.getDetails();
 // Internally
@@ -56,10 +60,13 @@ console.log(s3.gender);
 console.log(Student.count);
 
 
-const p1 = new Professor('john doe', 'm', ['math', 'science']);
-const p2 = new Professor('jane doe', 'f', null);
+const p1 = new Professor('john doe', 'm', ['math', 'science'], 3000, 18);
+const p2 = new Professor('jane doe', 'f', null, 4000, 22);
 // console.log(p1);
 // console.log(p2);
 
 console.log(p1.getDetails());
 console.log(p2.getDetails());
+
+console.log(process(p1));
+console.log(process(p2));

@@ -39,3 +39,13 @@ console.log('Welcome ' + (username ? username : 'Guest'));
 
 // null coalescing operator
 console.log('Welcome ' + (username ?? 'Guest')); // only if the left side is null or undefined, the right side will be considered
+
+
+const a = 10;
+const b = 10;
+const c = '10';
+console.log(a === b);
+// console.log(a == c); // error in typescript
+
+// console.log(a == c); // in javascript this would have given a value true
+// console.log(a === c); // in javascript this would have given a value false
